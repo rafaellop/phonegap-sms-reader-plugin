@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-		id="info.asankan.phonegap.smsplugin" 
+		id="com.itdar.phonegap.smsreader" 
 		version="0.2.0">
 		
-        <name>SMSPlugin</name>
-        <description>Cordova SMS Plugin to Send and Receive SMS</description>
+        <name>SmsReaderPlugin</name>
+        <description>Cordova Plugin to get unread SMS messages</description>
         <license>MIT</license>
         <keywords>cordova,sms</keywords>
-        <repo>https://github.com/asanka-x/Phonegap-SMS.git</repo>
+        <repo>https://github.com/amersabag/Phonegap-SMS.git</repo>
 		<js-module src="www/smsplugin.js" name="smsplugin">
             <clobbers target="smsplugin" />
         </js-module>
 		<!-- android -->
 		<platform name="android">
 			<config-file target="res/xml/config.xml" parent="/*">
-				<feature name="SMSPlugin">
-					<param name="android-package" value="info.asankan.phonegap.smsplugin.SmsPlugin" />
+				<feature name="SmsPlugin">
+					<param name="android-package" value="com.itdar.phonegap.smsreader.SmsReaderPlugin" />
 				</feature>
 			</config-file>
 			<config-file target="AndroidManifest.xml" parent="/*">
 				<uses-permission android:name="android.permission.SEND_SMS" />
 				<uses-permission android:name="android.permission.RECEIVE_SMS" />
+				<uses-permission android:name="android.permission.READ_SMS" />
 			</config-file>
 		
 			<source-file src="src/android/info/asankan/phonegap/smsplugin/SmsPlugin.java" target-dir="src/info/asankan/phonegap/smsplugin"/>

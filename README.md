@@ -25,7 +25,7 @@ __or__
 	
 #### Require the plugin module
 
-	var smsplugin = cordova.require("info.asankan.phonegap.smsplugin.smsplugin");
+	var smsplugin = cordova.require("com.itdar.phonegap.smsreader.smsplugin");
     
 #### Methods
 
