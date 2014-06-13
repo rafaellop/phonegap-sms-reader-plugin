@@ -21,6 +21,7 @@
 			</config-file>
 			<config-file target="AndroidManifest.xml" parent="/*">
 				<uses-permission android:name="android.permission.READ_SMS" />
+				<uses-permission android:name="android.permission.WRITE_SMS" />
 			</config-file>
 		
 			<source-file src="src/android/com/itdar/phonegap/smsreader/SmsReaderPlugin.java" target-dir="src/com/itdar/phonegap/smsreader"/>
